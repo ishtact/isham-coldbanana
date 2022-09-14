@@ -1,0 +1,102 @@
+$zindex1: 10;
+$zindex2: 20;
+$zindex3: 30;
+$zindex4: 40;
+$zindex5: 50;
+$txtdefaultclr: #212121;
+$txtcurrency: #747474;
+
+.bg-cold-bubble {
+    background-image: url(../assets/images/hero-bg.png);
+    background-color: #FFF;
+    background-size: inherit;
+    width: 100%;
+    height: 800px;
+    background-repeat: no-repeat;
+}
+
+.bg-cold-bubble-r {
+    position: absolute;
+    background-image: url(../assets/images/bubble-right.png);
+    background-size: initial;
+    width: 100%;
+    height: inherit;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.bg-cold-bubble-l {
+    position: absolute;
+    background-image: url(../assets/images/bubble-left.png);
+    background-size: auto;
+    width: 100%;
+    height: inherit;
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
+.head-cold-txt {
+    margin-top: 20vh;
+}
+
+.btn-grad {
+    background-image: linear-gradient(to right, #73E0A9 0%, #5B68DF 51%, #73E0A9 100%);
+    margin: 10px 0px;
+    padding: 10px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    border-radius: 50px;
+    text-transform: capitalize;
+}
+
+.btn-grad:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-grad.login{
+    margin-left: 100px;
+}
+
+.z-index1 {
+    z-index: $zindex1;
+}
+
+.logo-cold-txt {
+    color: #FFF;
+    z-index: 20;
+    position: absolute;
+    left: 50px;
+    top: 30px;
+    font-weight: bold;
+    font-size: 30px;
+}
+.navbar{
+    position: absolute;
+    width: 100%;
+    z-index: $zindex2;
+}
+
+.navbar-nav > li{
+    margin-right: 25px;
+    font-weight: bold;
+    color: $txtdefaultclr;
+}
+
+.currency-txt{
+    margin-top: -12px;
+    font-weight: bold;
+    color: $txtcurrency;
+}
+
+.border-radius-card{
+    border-radius: 30px;
+}
