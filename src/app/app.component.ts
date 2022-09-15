@@ -18,17 +18,21 @@ interface Products {
 
 export class AppComponent {
   title = 'Isham-ColdBanana';
-
-  public data:any = []
+  public data:any = {locations:[], products:[]}
+   
   constructor(private http: HttpClient) {
 
   }
 
-  ngOnInit(){
-    const url ='https://my-json-server.typicode.com/TomSearle/cb-devtest-api/products'
+  getData(){
+    const url ='https://my-json-server.typicode.com/TomSearle/cb-devtest-api/db'
     this.http.get(url).subscribe((res)=>{
       this.data = res
       console.log(this.data)
     })
+  }
+
+  ngOnInit(){
+    this.getData();
   }
 }
