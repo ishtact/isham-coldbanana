@@ -240,28 +240,36 @@ a:hover {
         padding: 120px 80px 100px 80px;
     }
 }
+
 @media (max-width: 1200px) {
     .footer-bubble-bg {
         background-size: contain;
     }
 }
+
 @media (max-width: 992px) {
-    .navbar{
+    .navbar {
         position: relative;
     }
-    footer{
+
+    footer {
         display: none;
     }
-    .navbar > .container, .navbar > .container-fluid {
-       display: initial;
+
+    .navbar>.container,
+    .navbar>.container-fluid {
+        display: initial;
     }
+
     .btn-grad.login {
         margin-left: 0;
     }
-    .navbar-collapse{
+
+    .navbar-collapse {
         padding: 20px 50px;
     }
+
     .bg-cold-bubble-r {
         display: none;
     }
-  }
+}
