@@ -18,17 +18,33 @@ interface Products {
 
 export class AppComponent {
   title = 'Isham-ColdBanana';
-  public data:any = {locations:[], products:[]}
-   
+  public data:any = [];
+  //public data:any = {locations:[], products:[]}
+  public displayData:any = []; 
+  
+
+  showMore() {
+    console.log(this.displayData)
+    let newLength = this.displayData.length + 6;
+    if (newLength > this.data.length) {
+        newLength = this.data.length
+    }
+     this.displayData = this.data.slice(0, newLength);
+    
+  }
+  
   constructor(private http: HttpClient) {
 
   }
 
   getData(){
     const url ='https://my-json-server.typicode.com/TomSearle/cb-devtest-api/db'
-    this.http.get(url).subscribe((res)=>{
-      this.data = res
+    this.http.get(url).subscribe((res:any)=>{
+      this.data = res.products[0]
       console.log(this.data)
+
+      this.showMore();
+      console.log(this.displayData)
     })
   }
 
