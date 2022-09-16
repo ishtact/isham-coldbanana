@@ -238,6 +238,10 @@ a:hover {
     cursor: pointer;
 }
 
+.load-more:hover{
+    text-decoration: underline;
+}
+
 /*Media*/
 
 @media (min-width: 1600px) {
