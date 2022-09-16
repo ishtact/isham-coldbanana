@@ -24,7 +24,6 @@ export class AppComponent {
   
 
   showMore() {
-    console.log(this.displayData)
     let newLength = this.displayData.length + 6;
     if (newLength > this.data.length) {
         newLength = this.data.length
